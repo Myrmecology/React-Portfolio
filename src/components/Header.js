@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <header className="header">
-      <h1>Justin</h1>
+      <h1>Justin       Portfolio</h1>
       <nav>
         <ul className="nav-links">
           <li>

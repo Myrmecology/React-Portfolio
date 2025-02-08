@@ -42,7 +42,7 @@ function Resume() {
       <h2>Resume</h2>
       
       <div className="download-section">
-        <a href="/path-to-your-resume.pdf" download className="download-button">
+        <a href="/resume/RESUME JD vs3.docx" download className="download-button">
           Download Full Resume
         </a>
       </div>
