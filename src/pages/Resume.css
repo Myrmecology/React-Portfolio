@@ -23,21 +23,45 @@
 }
 
 .download-button {
-  background: linear-gradient(135deg, #3182ce, #2b6cb0);
-  color: rgb(14, 2, 2);
+  background: linear-gradient(135deg, #e53e3e, #c53030);
+  color: white;
   padding: 1rem 2rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(229, 62, 62, 0.2);
   display: inline-block;
-  box-shadow: 0 4px 15px rgba(49, 130, 206, 0.2);
 }
 
 .download-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(49, 130, 206, 0.4);
-  background: linear-gradient(135deg, #2b6cb0, #1a365d);
+  box-shadow: 
+    0 8px 25px rgba(229, 62, 62, 0.4),
+    0 0 20px rgba(229, 62, 62, 0.6);
+  background: linear-gradient(135deg, #c53030, #9b2c2c);
+}
+
+.download-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #e53e3e, #fc8181, #e53e3e);
+  z-index: -1;
+  background-size: 200% 200%;
+  animation: borderGlow 3s linear infinite;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.download-button:hover::before {
+  opacity: 1;
 }
 
 .resume-content {
@@ -106,6 +130,7 @@ h3 {
   margin: 0.5rem 0;
   position: relative;
   padding-left: 1.5rem;
+  color: #ab2a2a;
 }
 
 .skills-category li::before {
@@ -154,6 +179,7 @@ h3 {
 .job li {
   margin: 0.5rem 0;
   position: relative;
+  color: #8b2020;
 }
 
 .job li::before {
@@ -187,6 +213,12 @@ h3 {
   0% { text-shadow: 0 0 10px rgba(66, 153, 225, 0.5), 0 0 20px rgba(66, 153, 225, 0.3); }
   50% { text-shadow: 0 0 20px rgba(66, 153, 225, 0.6), 0 0 30px rgba(66, 153, 225, 0.4); }
   100% { text-shadow: 0 0 10px rgba(66, 153, 225, 0.5), 0 0 20px rgba(66, 153, 225, 0.3); }
+}
+
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @media (max-width: 768px) {

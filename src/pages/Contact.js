@@ -9,6 +9,7 @@ function Contact() {
   });
 
   const [errors, setErrors] = useState({});
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -47,6 +48,11 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+    setShowConfirmation(true);
+    setFormData({ name: '', email: '', message: '' }); // Clear form
+    setTimeout(() => {
+      setShowConfirmation(false);
+    }, 3000); // Hide message after 3 seconds
   };
 
   return (
@@ -97,6 +103,12 @@ function Contact() {
 
         <button type="submit">Send Message</button>
       </form>
+      
+      {showConfirmation && (
+        <div className="message-confirmation">
+          Message Sent Successfully!
+        </div>
+      )}
     </section>
   );
 }
