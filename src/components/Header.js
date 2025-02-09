@@ -1,3 +1,4 @@
+// Header.js
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
@@ -5,14 +6,13 @@ import './Header.css';
 function Header() {
   const location = useLocation();
 
-  // Function to check if the link is active
   const isActive = (path) => {
     return location.pathname === path;
   };
 
   return (
     <header className="header">
-      <h1>Justin       Portfolio</h1>
+      <h1>Justin Portfolio</h1>
       <nav>
         <ul className="nav-links">
           <li>

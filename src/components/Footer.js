@@ -7,7 +7,7 @@ function Footer() {
       <div className="footer-content">
         <div className="social-links">
           <a 
-            href="https://www.freecodecamp.org/Myrmecology" 
+            href="https://www.freecodecamp.org/arachnology" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-link"

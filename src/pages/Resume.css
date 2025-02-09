@@ -1,8 +1,9 @@
+/* Resume.css */
 .resume {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
-  color: #993434;
+  color: #0d0b9f;
   animation: fadeIn 0.8s ease-in-out;
 }
 
@@ -24,7 +25,7 @@
 
 .download-button {
   background: linear-gradient(135deg, #e53e3e, #c53030);
-  color: white;
+  color: rgb(35, 102, 126);
   padding: 1rem 2rem;
   border-radius: 8px;
   text-decoration: none;
@@ -33,7 +34,6 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(229, 62, 62, 0.2);
-  display: inline-block;
 }
 
 .download-button:hover {
@@ -130,7 +130,7 @@ h3 {
   margin: 0.5rem 0;
   position: relative;
   padding-left: 1.5rem;
-  color: #ab2a2a;
+  color: #a01010;
 }
 
 .skills-category li::before {
@@ -179,7 +179,7 @@ h3 {
 .job li {
   margin: 0.5rem 0;
   position: relative;
-  color: #8b2020;
+  color: #750808;
 }
 
 .job li::before {
@@ -189,13 +189,10 @@ h3 {
   color: #4299e1;
 }
 
+/* Animations */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideUp {
@@ -221,16 +218,91 @@ h3 {
   100% { background-position: 0% 50%; }
 }
 
-@media (max-width: 768px) {
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .resume {
+    padding: 1.5rem;
+  }
+
+  .resume h2 {
+    font-size: 2.5rem;
+  }
+
+  .skills-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
   .resume {
     padding: 1rem;
   }
-  
+
+  .resume h2 {
+    font-size: 2rem;
+  }
+
   .skills-section {
     grid-template-columns: 1fr;
   }
-  
-  .resume h2 {
-    font-size: 2.5rem;
+
+  .resume-content {
+    padding: 1.5rem;
+  }
+
+  .job {
+    padding: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .job h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .download-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .skills-category {
+    padding: 1rem;
+  }
+
+  .skills-category li {
+    font-size: 0.9rem;
+  }
+
+  .job li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Education section responsive styles */
+.education ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.education li {
+  margin: 0.5rem 0;
+  position: relative;
+  color: #720a0a;
+}
+
+.education li::before {
+  content: '•';
+  position: absolute;
+  left: -1.5rem;
+  color: #4299e1;
+}
+
+@media screen and (max-width: 480px) {
+  .education li {
+    font-size: 0.9rem;
   }
 }
