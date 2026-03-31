@@ -3,134 +3,97 @@ import React from 'react';
 import './Resume.css';
 
 function Resume() {
-  const frontEndSkills = [
-    'HTML5',
-    'CSS3',
-    'JavaScript',
-    'React',
-    'Node',
-    'Sass',
-    'Bootstrap',
-    'jQuery'
-  ];
-
-  const backEndSkills = [
-    'Node.js',
-    'Express.js',
-    'MySQL',
-    'MongoDB',
-    'APIs',
-    'GraphQL',
-    'Object-Oriented Programming',
-    'Model-View-Controller'
-  ];
-
-  const professionalSkills = [
-    'Team Leadership',
-    'Project Management',
-    'Problem Solving',
-    'Safety Management',
-    'Quality Control',
-    'Time Management',
-    'Team Facilitation',
-    'Operations Management',
-    'Budget Management',
-    'Customer Service'
-  ];
-
   return (
     <section className="resume">
       <h2>Resume</h2>
-      
+
+      {/* Download Button */}
       <div className="download-section">
-        <a href="/resume/RESUME JD vs3.docx" download className="download-button">
+        <a
+          href="/resume/RESUME_CLASS_PROJECT.docx"
+          download
+          className="download-button"
+        >
           Download Full Resume
         </a>
       </div>
 
+      {/* Resume Content */}
       <div className="resume-content">
-        <div className="objective">
-          <h3>Objective</h3>
-          <p>Dedicated professional seeking to leverage extensive experience in team management, quality control, and operations supervision along with newly acquired full-stack development skills to contribute to innovative web development projects.</p>
-        </div>
 
+        {/* Education Section */}
         <div className="education">
           <h3>Education</h3>
           <ul>
-            <li>Denver University - Coding Bootcamp</li>
-            <li>Regis University - Computer Science</li>
-            <li>Metropolitan State University - Molecular Biology</li>
-            <li>Front Range Community College - Associate of Science</li>
+            <li>Harvard University – Current Student</li>
+            <li>Regis University – Coursework Completed</li>
+            <li>Metro University of Denver – Coursework Completed</li>
+            <li>University of Denver – Coursework Completed</li>
           </ul>
         </div>
 
-        <div className="skills-section">
-          <div className="skills-category">
-            <h3>Frontend Development</h3>
-            <ul>
-              {frontEndSkills.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="skills-category">
-            <h3>Backend Development</h3>
-            <ul>
-              {backEndSkills.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="skills-category">
-            <h3>Professional Skills</h3>
-            <ul>
-              {professionalSkills.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
+        {/* Professional Experience */}
         <div className="experience">
           <h3>Professional Experience</h3>
-          
+
           <div className="job">
-            <h4>Mercedes-Benz of Westminster</h4>
-            <p className="job-title">Service Porter</p>
-            <p className="job-date">December 2022 - Present</p>
+            <h4>Operations Manager / Service Porter Manager – Automotive Operations</h4>
             <ul>
-              <li>Facilitate maximum customer service satisfaction</li>
-              <li>Manage vehicle logistics and maintenance</li>
-              <li>Excel in fast-paced environment</li>
-              <li>Collaborate with management for operational efficiency</li>
+              <li>Managed daily operations and coordinated staff workflow in a luxury automotive environment.</li>
+              <li>Oversaw process improvements and customer service strategies.</li>
             </ul>
           </div>
 
           <div className="job">
-            <h4>At Home Décor Superstore</h4>
-            <p className="job-title">Key Holder/Manager</p>
-            <p className="job-date">December 2016 - May 2018</p>
+            <h4>Computer Scientist / Software Developer</h4>
             <ul>
-              <li>Led team management and building operations</li>
-              <li>Managed inventory and warehouse logistics</li>
-              <li>Operated heavy equipment and managed facility safety</li>
+              <li>Designed and implemented software solutions using TypeScript, JavaScript, Java, C++, Python, Rust, and Ruby.</li>
+              <li>Built web applications using MERN (MongoDB, Express, React, Node) and PERN (PostgreSQL, Express, React, Node) stacks.</li>
+              <li>Developed games and interactive applications with a strong foundation in 6502 assembly and computer architecture.</li>
+              <li>Assembled custom computing hardware and analyzed processor architectures for performance optimization.</li>
             </ul>
           </div>
 
           <div className="job">
-            <h4>Butterfly Pavilion</h4>
-            <p className="job-title">Operations Supervisor</p>
-            <p className="job-date">May 2005 - January 2013</p>
+            <h4>Laboratory / Research Experience</h4>
             <ul>
-              <li>Managed facility maintenance and operations</li>
-              <li>Coordinated with executive leadership</li>
-              <li>Managed operations budget and cash flow</li>
-              <li>Received Mountain States Employers training certification</li>
+              <li>Conducted molecular biology and chemistry laboratory experiments, maintaining strict adherence to safety and procedural standards.</li>
+              <li>Applied quantitative and computational techniques to support experimental data analysis.</li>
             </ul>
           </div>
         </div>
+
+        {/* Technical Skills */}
+        <div className="skills-section">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>Programming Languages: TypeScript, JavaScript, Java, C++, Python, Rust, Ruby, 6502 Assembly</li>
+            <li>Web Development: MERN Stack, PERN Stack</li>
+            <li>Game Development: Engine design, gameplay mechanics, debugging</li>
+            <li>Hardware & Systems: Computer assembly, processor architecture, optimization techniques</li>
+            <li>Other: Laboratory techniques in molecular biology and chemistry, mathematical modeling and data analysis</li>
+          </ul>
+        </div>
+
+        {/* Projects / Portfolio Highlights */}
+        <div className="projects">
+          <h3>Projects / Portfolio Highlights</h3>
+          <ul>
+            <li>Full-stack web applications using MERN and PERN stacks</li>
+            <li>Custom-built personal computers and experimental computing rigs</li>
+            <li>Game development projects (2D and 3D) with modular design and interactive systems</li>
+            <li>Laboratory simulations and data-driven analyses in chemistry and molecular biology</li>
+          </ul>
+        </div>
+
+        {/* Professional Summary */}
+        <div className="summary">
+          <h3>Professional Summary</h3>
+          <p>
+            Multidisciplinary technologist and scientist with a strong foundation in software development, computational sciences, laboratory research, and operations management. Skilled in bridging technical and operational domains with practical and creative problem-solving. Experienced in both academic and applied environments, currently expanding expertise through advanced studies at Harvard University.
+          </p>
+        </div>
+
       </div>
     </section>
   );
