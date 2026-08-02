@@ -9,7 +9,7 @@
     "webpack-dev-server": "4.15.2",
     "postcss": "8.4.31",
     "node-forge": "1.4.0",
-    "brace-expansion": "1.1.13"
+    "brace-expansion": "1.1.17"
   },
 
   "dependencies": {
